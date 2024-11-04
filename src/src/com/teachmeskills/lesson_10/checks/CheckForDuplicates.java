@@ -20,7 +20,7 @@ public class CheckForDuplicates {
             if (cards[i] == null) continue;
 
             for (int j = i + 1; j < cards.length; j++) {
-                if (cards[i].getCardNumber().equals(cards[j].getCardNumber()) && cards[i].getCvv() == cards[j].getCvv()) {
+                if (cards[i].equals(cards[j])) {
                     duplicateCount++;
                     cards[j] = null;
                 }
@@ -28,7 +28,7 @@ public class CheckForDuplicates {
 
             if (duplicateCount > 1) {
                 hasDuplicates = true;
-                System.out.println("The client has" + duplicateCount + " identical cards with a number "
+                System.out.println("The client has " + duplicateCount + " identical cards with a number "
                 + cards[i].getCardNumber() + " and CVV " + cards[i].getCvv());
             }
         }
