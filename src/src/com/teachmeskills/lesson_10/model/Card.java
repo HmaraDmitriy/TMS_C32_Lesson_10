@@ -34,4 +34,13 @@ public class Card {
     public int hashCode() {
         return Objects.hash(cardNumber, cvv);
     }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "cardNumber='" + cardNumber + '\'' +
+                ", cvv=" + cvv +
+                ", amount=" + amount +
+                '}';
+    }
 }
